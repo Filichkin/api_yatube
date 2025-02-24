@@ -6,6 +6,7 @@ from .serializers import CommentSerializer, GroupSerializer, PostSerializer
 
 
 class IsAuthorOrReadOnly(permissions.BasePermission):
+    message = 'Only for author allowed.'
 
     def has_permission(self, request, view):
         return request.user.is_authenticated

@@ -5,6 +5,7 @@ from rest_framework.routers import SimpleRouter
 from . import views
 
 v1_router = SimpleRouter()
+
 v1_router.register(r'posts', views.PostViewSet)
 v1_router.register(r'groups', views.GroupViewSet)
 v1_router.register(
